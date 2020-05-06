@@ -1,0 +1,17 @@
+---
+
+- name: Set keyboard InitialKeyRepeat
+  osx_defaults:
+    domain: NSGlobalDomain
+    key: InitialKeyRepeat
+    type: float
+    value: "{{osx_defaults.InitialKeyRepeat}}"
+    state: present
+
+- name: Set keyboard KeyRepeat
+  osx_defaults:
+    domain: NSGlobalDomain
+    key: KeyRepeat
+    type: float
+    value: "{{osx_defaults.KeyRepeat}}"
+    state: present

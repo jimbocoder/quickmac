@@ -25,6 +25,6 @@ ansible-playbook playbook.yml --diff
 
 ### TODO list
 
-1. [ ] defaults write -g InitialKeyRepeat -float 10.0 # normal minimum is 15 (225 ms)
-1. [ ] defaults write -g KeyRepeat -float 1.0 # normal minimum is 2 (30 ms)
+1. [x] defaults write -g InitialKeyRepeat -float 10.0 # normal minimum is 15 (225 ms)
+1. [x] defaults write -g KeyRepeat -float 1.0 # normal minimum is 2 (30 ms)
 
