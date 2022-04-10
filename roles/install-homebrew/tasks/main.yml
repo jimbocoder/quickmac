@@ -1,0 +1,22 @@
+---
+
+- name: Check for homebrew
+  become: no
+  shell: "type brew"
+  register: brewcheck
+  failed_when: "(brewcheck.rc != 0) and ('type: brew: not found' not in brewcheck.stderr)"
+
+- name: Install homebrew
+  become: no
+  block:
+    - name: Run homebrew install script
+      shell:
+        cmd: >
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+    - name: Add homebrew shell init to shell(s)
+      shell: |+
+        echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> "{{ansible_env.HOME}}/.zshrc"
+        echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> "{{ansible_env.HOME}}/.bashrc"
+  when: "'type: brew: not found' in brewcheck.stderr"
+

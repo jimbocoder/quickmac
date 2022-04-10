@@ -15,3 +15,12 @@
     type: float
     value: "{{osx_defaults.KeyRepeat}}"
     state: present
+
+- name: Set trackpad scroll direction
+  osx_defaults:
+    domain: NSGlobalDomain
+    key: com.apple.swipescrolldirection
+    type: bool
+    value: "NO"
+    state: present
+

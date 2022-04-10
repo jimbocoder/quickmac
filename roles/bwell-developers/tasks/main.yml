@@ -1,0 +1,43 @@
+- name: developer brew packages
+  community.general.homebrew:
+    name:
+      - asciidoc
+      - aws-iam-authenticator
+      - awscli
+      - awslogs
+      - berkeley-db
+      - boost
+      - cairo
+      - chamber
+      - cjson
+      - gdal
+      - gdbm
+      - geoip
+      - geos
+      - gettext
+      - giflib
+      - git
+      - git-filter-repo
+      - gnu-sed
+      - gnutls
+      - k9s
+      - krew
+      - kubectx
+      - kubernetes-cli
+      - kustomize
+      - nvm
+      - sqlite
+      - pyenv
+      - pyenv-ccache
+      - cookiecutter
+
+- name: developer brew casks
+  community.general.homebrew_cask:
+    sudo_password: "{{ ansible_become_pass }}"
+    name:
+      - homebrew/cask/aptible
+      - homebrew/cask/aws-vault
+      - homebrew/cask/lens
+      - homebrew/cask/iterm2
+      - homebrew/cask/docker
+

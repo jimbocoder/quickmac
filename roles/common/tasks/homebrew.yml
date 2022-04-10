@@ -1,0 +1,53 @@
+
+- name: absolutely common brew packages
+  community.general.homebrew:
+    name:
+      - autoconf
+      - ca-certificates
+      - cmake
+      - make
+      - coreutils
+      - curl
+      - findutils
+      - fontconfig
+      - gcc
+      - glib
+      - glib-openssl
+      - gnupg
+      - go
+      - google-authenticator-libpam
+      - grep
+      - libffi
+      - libgcrypt
+      - libxml2
+      - libxmlsec1
+      - libxslt
+      - libyaml
+      - moreutils
+      - ncurses
+      - nmap
+      - openssl
+      - openssl@1.1
+      - p7zip
+      - pcre
+      - pcre2
+      - perl
+      - pkg-config
+      - readline
+      - six
+      - szip
+      - tcptraceroute
+      - telnet
+      - the_silver_searcher
+      - tree
+      - wget
+      - zlib
+      - htop
+
+- name: absolutely common brew casks
+  community.general.homebrew_cask:
+    sudo_password: "{{ ansible_become_pass }}"
+    name:
+      - homebrew/cask/slack
+      - homebrew/cask/keybase
+

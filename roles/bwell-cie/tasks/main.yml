@@ -1,0 +1,19 @@
+- name: homebrew tap(s)
+  community.general.homebrew_tap:
+    name: kwilczynski/homebrew-pkenv
+
+- name: CIE brew packages
+  community.general.homebrew:
+    name:
+      - sops
+      - terraform-docs
+      - tflint
+      - helm
+      - helmfile
+      - kwilczynski/pkenv/pkenv
+
+# - name: CIE brew casks
+#   community.general.homebrew_cask:
+#     sudo_password: "{{ ansible_become_pass }}"
+#     name: []
+#

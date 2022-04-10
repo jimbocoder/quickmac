@@ -2,5 +2,5 @@
 
 osx_defaults:
   InitialKeyRepeat: 10.0
-  KeyRepeat: 1.5
+  KeyRepeat: 1.0
 

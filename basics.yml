@@ -9,12 +9,8 @@
       check_mode: yes
       shell:
         cmd: "true"
-  vars:
-    ansible_become_pass: "{{ lookup('file', 'become-pass.txt') }}"
   roles:
-    - common
-    - bwell-developers
-    - bwell-cie
-    - jim
-    - user-interface
+    - install-homebrew
+    # - user-interface
+    # - geerlingguy.homebrew
 

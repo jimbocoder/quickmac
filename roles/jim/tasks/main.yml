@@ -1,0 +1,24 @@
+- name: jim brew packages
+  community.general.homebrew:
+    name:
+      - autojump
+      - fzf
+      - lua
+      - oath-toolkit
+      - tcptraceroute
+      - tcptunnel
+      - telnet
+      - direnv
+      - tmux
+      - fasd
+      - tig
+
+- name: jim brew casks
+  community.general.homebrew_cask:
+    sudo_password: "{{ ansible_become_pass }}"
+    name:
+      - homebrew/cask/disk-inventory-x
+      - homebrew/cask-versions/synergy-beta
+      - homebrew/cask/karabiner-elements
+
+
