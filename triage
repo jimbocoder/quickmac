@@ -1,0 +1,78 @@
+to get ALL settings:
+
+`defaults read`
+
+
+
+# dev tools
+ansible
+autoconf
+asciidoc
+cmake
+gettext
+glib
+glib-openssl
+htop
+libpng
+make
+maven
+pkg-config
+pyenv
+pyenv-ccache
+
+# aws
+awscli
+awslogs
+chamber
+
+# cli productivity
+autojump
+direnv
+fasd
+
+# essentials
+curl
+coreutils
+fontconfig
+findutils
+nmap
+ncurses
+moreutils
+node
+openssl
+openssl@1.1
+p7zip
+tcptraceroute
+tcptunnel
+telnet
+the_silver_searcher
+readline
+tmux
+tree
+wget
+zlib
+
+
+
+
+# media
+ffmpeg
+flac
+giflib
+jpeg
+lame
+x264
+x265
+xvid
+
+
+# devops
+ansible
+helm
+helmfile
+kubernetes-cli
+kustomize
+terraform
+
+# system
+unbound
